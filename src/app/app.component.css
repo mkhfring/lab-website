@@ -48,6 +48,12 @@ main {
     top: -50px;
 }
 
+.supervisor-image {
+    width: 150px;  /* Adjust this value to the desired size */
+    height: 150px; /* Adjust this value to the desired size */
+    border-radius: 50%; /* This makes the image circular */
+}
+
 #lab-summary {
     width: 55%;
 }
