@@ -22,7 +22,7 @@ COPY --from=build /app/dist/lab-app/ .
 RUN npm install -g http-server
 
 # Expose port 8080
-EXPOSE 8080
+EXPOSE 3000
 
 # Launch the server
-CMD ["http-server", "-p", "8080"]
+CMD ["http-server", "-p", "3000"]
