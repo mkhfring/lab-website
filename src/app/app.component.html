@@ -2,35 +2,47 @@
 <html>
 <head>
     <title>Dr. Fatemeh Hendijani Fard's Lab</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-    <header>
+    <header class="container text-center py-3">
         <h1>Welcome to Our Research Lab</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="team.html">Team Members</a></li>
-            <li><a href="papers.html">Research Papers</a></li>
-            <li><a href="projects.html">Projects</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="team.html">Team Members</a></li>
+                <li class="nav-item"><a class="nav-link" href="papers.html">Research Papers</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-        <div id="supervisor">
-            <img class="supervisor-image" src="assets/supervisor.jpg" alt="Supervisor">
-            <div id="news-feed">
+    <main class="container py-3">
+        <div id="supervisor" class="row">
+            <div class="col-md-6">
+                <img class="img-fluid supervisor-image" src="assets/supervisor.jpg" alt="Supervisor">
+            </div>
+            <div id="news-feed" class="col-md-6">
                 <!-- Tweets will go here. -->
             </div>
         </div>
-        <div id="lab-summary">
+        <div id="lab-summary" class="py-3">
             <h2>About our Lab</h2>
             <p>
-                Focus of our lab is on developing new techniques to employe language models for code related tasks
+                Focus of our lab is on developing new techniques to employ language models for code related tasks
             </p>
         </div>
     </main>
-    <footer>
-        <p>Copyright © 2023 Computer Science Research Lab</p>
+    <footer class="footer bg-light py-3 text-center">
+        <div class="container">
+            <p>Copyright © 2023 Computer Science Research Lab</p>
+        </div>
     </footer>
+    <!-- Include Bootstrap JS and its dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
