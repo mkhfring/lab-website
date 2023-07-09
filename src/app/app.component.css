@@ -2,28 +2,31 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header {
-    background: url('assets/background.jpg') no-repeat center center;
-    background-size: cover;
-    height: 200px;
-    color: white;
-    text-align: center;
-    padding-top: 50px;
+.header {
+  background-image: url('assets/background.jpg');
+  color: white;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size:1.5rem;
+  font-weight:600;
+  height: 300px;
 }
+
 .supervisor-image {
     width: 200px;  /* Adjust this value to the desired size */
-    height: 200px; /* Adjust this value to the desired size */
-    border-radius: 50%; /* This makes the image circular */
-    margin-left: 180px;
-    transform: translate(2%,-45%);
-    
+    border-radius: 50%; /* This makes the image circular */    
 }
+
 nav {
-    background-color: #333;
+    width:100%;
     color: white;
     padding: 10px 0;
-    margin-bottom: 20px;
-    transform: translateX(-13%);
+    margin-bottom: 90px;
+    height:50px;
+
 }
 
 nav ul {
@@ -44,6 +47,19 @@ nav ul li a {
 main {
     display: flex;
     justify-content: space-between;
+}
+
+.about {
+  box-shadow: 3px 6px 11px 2px #3b3737b8;
+  background-color: aliceblue;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+
 }
 
 #supervisor {
