@@ -3,8 +3,7 @@ body {
 }
 
 .header {
-  background-image: url('assets/background.jpg');
-  color: white;
+  color: #151f3d;
   display: flex;
   text-align: center;
   align-content: center;
@@ -12,23 +11,57 @@ body {
   justify-content: center;
   font-size:1.5rem;
   font-weight:600;
-  height: 300px;
+  height: 450px;
+  opacity: 1;
+  background-image: url('../assets/background.jpg');
+width:100%;
 }
 
+
+.supervisor-info {
+  opacity: 1;
+ display:flex;
+  border-radius: 102px;
+  height: 203px;
+  width: 50%;
+  background: #f3f8fe;
+}
+
+.info {
+  color: #151f3d;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bolder;
+  align-items: stretch;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  justify-content: space-between;
+}
 .supervisor-image {
-    width: 200px;  /* Adjust this value to the desired size */
-    border-radius: 50%; /* This makes the image circular */    
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  left:0;
+
 }
 
 nav {
     width:100%;
-    color: white;
+    color: #151f3d;
     padding: 10px 0;
-    margin-bottom: 90px;
-    height:50px;
+    height:95px;
 
 }
-
+.logo {
+    width: 300px;
+}
 nav ul {
     list-style: none;
     text-align: center;
@@ -40,8 +73,9 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+  color: #151f3d;
     text-decoration: none;
+    font-weight:600;
 }
 
 main {
@@ -50,15 +84,14 @@ main {
 }
 
 .about {
-  box-shadow: 3px 6px 11px 2px #3b3737b8;
-  background-color: aliceblue;
   padding: 15px;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
+  margin-left: 24%;
+  margin-top: 2%;
 
 }
 

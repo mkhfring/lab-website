@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\assets",
+    "\\src\\assets\\icons"
   ],
+  "SelectedNode": "\\src\\assets\\icons\\location.png",
   "PreviewInSolutionExplorer": false
 }
