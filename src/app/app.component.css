@@ -120,3 +120,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.icon {
+  width: 1.8em;
+  margin-right: 2px;
+}
