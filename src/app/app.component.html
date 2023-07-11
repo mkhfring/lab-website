@@ -1,97 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dr. Fatemeh Hendijani Fard's Lab</title>
-    <!-- Include Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="app.component.css"> -->
+    <title>New website</title>
 </head>
 <body>
-  <div class="">
-    <div class="col-md-12">
-      <div class="row">
+    <div class="wrapper">
+        <header>
+            <img class="logo" src="assets/UBC.png" alt="ubc logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav>
 
-        <nav class="navbar navbar-expand-lg" style="background-color: aliceblue;">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-            
-              <img class="img-fluid logo" src="assets/UBC.png" alt="LOGO">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Team</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Research</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Projects</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <div class="row">
-        <!--<div id="header"></div>
-  <div id="supervisor-info">
-    <img class="img-fluid supervisor-image" src="assets/supervisor.jpg" alt="Supervisor">
-  </div>-->
-        <div class="header">
-          <div class="supervisor-info">
-            <img class="img-fluid supervisor-image" src="assets/supervisor.jpg" alt="Supervisor">
-            <div class="info">
-              <h2>Fatemeh Hendijani Fard</h2>
-              <p>ASSISTANT PROFESSOR</p>
-              <p>
-                COMPUTER SCIENCE, DATA SCIENCE
-              </p>
-              <div class="icons">
-                <p> <img class="icon" src="../assets/icons/pin.png" /> FIP 305</p>
-                <p><img class="icon" src="../assets/icons/telephone.png" /> 250.807.9607</p>
-                <p>  <img class="icon" src="../assets/icons/envelope.png" /> fatemeh.fard@ubc.ca</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        </header>
 
-      <div class="row">
-        <div class="col-md-6 about">
-          <h2>About our Lab</h2>
-          <p>
-            Focus of our lab is on developing new techniques to employ language models for code related tasks
-          </p>
+        <main>
+            <div class="supervisior">
+                <h1>Fatemeh Hendijani Fard</h1>
+                <h2>Asistant Professor</h2>
+                <h2>Computer Science, Data Science</h2>
+                <div class="contact-icons">
+                    <div class="location fig">
+                        <img class="icon" src="assets/icons/location.png" alt="location">
+                        <p>FIP 305</p>
+                    </div>
+                    <div class="phone fig">
+                        <img class="icon" src="assets/icons/telephone.png" alt="phone">
+                        <p>250.807.9607</p>
+                    </div>
+                    <div class="email fig">
+                        <img class="icon" src="assets/icons/envelope.png" alt="email">
+                        <p>fatemeh.fard.ubc.ca</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="summary">
+            <h1>About our Lab</h1>
+            <p>Focus of our lab is on developing new techniques to employ language models for code related tasks</p>
         </div>
-        <div class="col-md-6 about">
-          <h2>News</h2>
-          <p>
-            Our  emsejournal paper “Evaluating Pre-Trained Models for User Feedback Analysis in 
-            Software Engineering: A Study on Classification of App-Reviews” is online. </p>
+        <div class="news">
+            <h1>News</h1>
             <p>
-              Our  emsejournal paper “Evaluating Pre-Trained Models for User
-               Feedback Analysis in Software Engineering: A Study on Classification of App-Reviews” is online.
+                Our emsejournal paper “Evaluating Pre-Trained Models for User Feedback Analysis in Software Engineering:
+                 A Study on Classification of App-Reviews” is online.
+            </p>
+            <p>
+                Our emsejournal paper “Evaluating Pre-Trained Models for User Feedback Analysis in Software Engineering: 
+                A Study on Classification of App-Reviews” is online.
             </p>
         </div>
-      
-
-      </div>
     </div>
-    
-  </div> 
-    
-   
-    <!--<footer class="footer bg-light py-3 text-center">
-        <div class="container">
-            <p>Copyright © 2023 Computer Science Research Lab</p>
-        </div>
-    </footer>-->
-    <!-- Include Bootstrap JS and its dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
