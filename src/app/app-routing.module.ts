@@ -3,10 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/main.component';
 import { MemberComponent } from './components/member/member.component';
 import { MembersComponent } from './components/members/members.component';
+import { ResearchComponent } from './components/research/research.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 const routes: Routes = [
   {path: 'home', component: MainComponent},
   {path: 'members', component: MembersComponent},
+  {path: 'research', component: ResearchComponent},
+  {path: 'projects', component: ProjectsComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 
 ];
