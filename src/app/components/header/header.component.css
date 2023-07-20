@@ -5,7 +5,7 @@ nav ul li a {
 ul li a.active:before {
     position:absolute;
     content: "";
-    width: 1em;
+    width: 30%;
     height: 1px;
     border-bottom: 2px solid black;
     bottom: -6px;
