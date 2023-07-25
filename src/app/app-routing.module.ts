@@ -6,6 +6,7 @@ import { MembersComponent } from './components/members/members.component';
 import { ResearchComponent } from './components/research/research.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { LoginModuleModule } from './modules/login-module/login-module.module';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: 'home', component: MainComponent},
@@ -15,7 +16,13 @@ const routes: Routes = [
   {
     path: 'login', 
     loadChildren: ()=>
-      import('./modules/login-module/login-module.module').then((m)=>LoginModuleModule),
+      import('./modules/login-module/login-module.module').then((m)=>m.LoginModuleModule),
+  },
+  {
+    path: 'admin', 
+    canActivate:[AuthGuard],
+    loadChildren: ()=>
+      import('./modules/admin/admin.module').then((m)=>m.AdminModule),
   },
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   
