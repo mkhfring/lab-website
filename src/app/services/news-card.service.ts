@@ -4,12 +4,15 @@ import { NewsCard } from '../models/news-card';
 import { Observable, map } from 'rxjs';
 import { Title } from '@angular/platform-browser';
 import { AuthService } from './auth.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NewsCardService {
-  apiURL = 'http://127.0.0.1:5001/apiv1/news_card'
+
+  baseUrl = environment.baseUrl
+  apiURL = `${this.baseUrl}news_card`
   constructor(private http:HttpClient, private auth:AuthService) { }
 
   get_newsCard(): Observable<NewsCard>{
@@ -29,7 +32,7 @@ export class NewsCardService {
       })
     };
 
-    return this.http.put('http://localhost:5001/apiv1/news_card', data, httpOptions);
+    return this.http.put(`${this.baseUrl}news_card`, data, httpOptions);
   }
 
 }

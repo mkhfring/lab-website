@@ -4,17 +4,19 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Lab } from '../models/lab';
 import { AuthService } from './auth.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LabService {
-  apiURL = 'http://127.0.0.1:5001/apiv1/lab'
+
+  baseURL = environment.baseUrl;
   requestMessage= ''
   constructor(private http:HttpClient, private auth:AuthService) { }
 
   get_lab(): Observable<Lab>{
-    return this.http.get<{summary: string, title:string}>(`${this.apiURL}`) 
+    return this.http.get<{summary: string, title:string}>(`${this.baseURL}lab`) 
       .pipe(
         map(data => new Lab(data.summary, data.title))
       );
@@ -31,6 +33,6 @@ export class LabService {
       })
     };
 
-    return this.http.put('http://localhost:5001/apiv1/lab', data, httpOptions);
+    return this.http.put(`${this.baseURL}lab`, data, httpOptions);
   }
 }
