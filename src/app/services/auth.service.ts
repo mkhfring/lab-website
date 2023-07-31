@@ -1,5 +1,6 @@
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Injectable({
@@ -7,7 +8,8 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
   private token: string | null = null;
-
+  private isLoggedInSubject = new BehaviorSubject<boolean>(false);
+  isLoggedIn$ = this.isLoggedInSubject.asObservable();
   constructor(private http : HttpClient) { }
   login({email, password}: any): void{
     this.http.post('http://127.0.0.1:5001/auth/login', {email:email, password:password}, { observe: 'response' }).subscribe(
@@ -15,10 +17,15 @@ export class AuthService {
         if(res.status == 200 && res.body.hasOwnProperty('access_token')){
           this.token = res.body.access_token;
           if (this.token){this.setToken(this.token)}
+          this.isLoggedInSubject.next(true);
         }
       },
       (err) => console.error(err)
     )
+  }
+  logout(): void{
+    localStorage.removeItem('token');
+    this.isLoggedInSubject.next(false);
   }
   isLogin():boolean{
     return this.getToken()!=null
