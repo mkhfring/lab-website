@@ -31,11 +31,11 @@
             </div>
         </main>
         <div class="summary">
-            <h1>{{lab!.title}}</h1>
-            <p>{{lab.summary}}</p>
+            <h1 *ngIf="lab">{{lab!.title}}</h1>
+            <p *ngIf="lab">{{lab.summary}}</p>
         </div>
         <div class="news">
-            <h1>{{newCard!.title}}</h1>
+            <h1 *ngIf="newCard">{{newCard!.title}}</h1>
             <p *ngFor="let newsItem of newsList">
                 {{newsItem.body}}
             </p>
