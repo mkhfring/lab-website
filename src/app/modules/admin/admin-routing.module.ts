@@ -1,9 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { UpdateNewsItemsComponent } from './components/update-news-items/update-news-items.component';
+import { UpdateNewsCardComponent } from './components/update-news-card/update-news-card.component';
+import { UpdateLabComponent } from './components/update-lab/update-lab.component';
 
 const routes: Routes = [
-  {path: '', component: AdminDashboardComponent}
+  {
+    path: '', component: AdminDashboardComponent,
+    children: [
+      {path: 'updateNewsItems', component:UpdateNewsItemsComponent},
+      {path: 'updateNewsCard', component:UpdateNewsCardComponent},
+      {path: 'updateLab', component:UpdateLabComponent},
+    ]
+  }
+
 ];
 
 @NgModule({

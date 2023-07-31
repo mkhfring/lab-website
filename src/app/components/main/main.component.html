@@ -36,13 +36,8 @@
         </div>
         <div class="news">
             <h1>News</h1>
-            <p>
-                Our emsejournal paper “Evaluating Pre-Trained Models for User Feedback Analysis in Software Engineering:
-                 A Study on Classification of App-Reviews” is online.
-            </p>
-            <p>
-                Our emsejournal paper “Evaluating Pre-Trained Models for User Feedback Analysis in Software Engineering: 
-                A Study on Classification of App-Reviews” is online.
+            <p *ngFor="let newsItem of newsList">
+                {{newsItem.body}}
             </p>
         </div>
     </div>
