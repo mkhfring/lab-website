@@ -1,1 +1,8 @@
-<p>update-lab works!</p>
+<form [formGroup]="labEditForm" (ngSubmit)="onSubmit()">
+    <label>
+      Title:
+      <input type="text" formControlName="title" name="title" placeholder="title">
+      <input type="text" formControlName="summary" name="summary" placeholder="summary">
+    </label>
+    <button type="submit">Submit</button>
+  </form>
