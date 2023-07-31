@@ -1,0 +1,7 @@
+<form [formGroup]="newsCardForm" (ngSubmit)="onSubmit()">
+    <label>
+      Title:
+      <input type="text" formControlName="title">
+    </label>
+    <button type="submit">Submit</button>
+  </form>

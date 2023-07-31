@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { AdminModule } from './modules/admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,15 @@ import { RouterModule } from '@angular/router';
     MainComponent,
     ResearchComponent,
     ProjectsComponent,
-    HeaderComponent
+    HeaderComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
