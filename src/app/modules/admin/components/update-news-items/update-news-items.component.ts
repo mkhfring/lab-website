@@ -13,7 +13,7 @@ import { NewsService } from 'src/app/services/news.service';
 export class UpdateNewsItemsComponent implements OnInit {
 
   newsList: News[] = [];
-  constructor(private auth:AuthService, private router:Router, private news:NewsService, private location:Location) { }
+  constructor(private auth:AuthService, private router:Router, private news:NewsService) { }
 
   
   ngOnInit(): void {
