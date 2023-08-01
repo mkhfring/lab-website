@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { News } from 'src/app/models/news';
 import { AuthService } from 'src/app/services/auth.service';
+import { NewsService } from 'src/app/services/news.service';
 
 @Component({
   selector: 'app-update-news-items',
@@ -10,30 +12,34 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class UpdateNewsItemsComponent implements OnInit {
 
-  loginForm = new FormGroup(
-    {
-      email: new FormControl(''),
-      password: new FormControl('')
-    }
-  )
-  constructor(private auth:AuthService, private router:Router) { }
+  newsList: News[] = [];
+  constructor(private auth:AuthService, private router:Router, private news:NewsService) { }
 
   
   ngOnInit(): void {
+    this.news.get_lab().subscribe( 
+      res=>{
+        this.newsList = res
+      }
+    );
   }
   onSubmit(): void{
-    if(this.loginForm.valid){
-      this.auth.login(this.loginForm.value);
-      if(this.auth.isLogin()){
-        console.log('User is login');
-        this.router.navigate(['admin']);
 
-      }
-      else{
-        console.log('login failed');
-      }
-    }
     
+  }
+  editNews(id:number): void{
+    this.news.set_news_id(id)
+    this.router.navigate(['admin/editNews'])
+  }
+  deleteNews(id:number): void{
+    this.news.delete_news_by_id(id).subscribe(
+      res =>{
+        console.log(res)
+        this.router.navigate(['admin/updateNewsItems'])
+      }
+
+    )
+    // this.router.navigate(['admin/updateNewsItems'])
   }
 
 }

@@ -1,0 +1,11 @@
+.news-card{
+    display: flex;
+    gap: 2em;
+}
+.news-card h3{
+    border: rgb(189, 132, 132) solid;
+    padding: 0.7em 0.7em;
+}
+.button{
+    cursor: pointer;
+}

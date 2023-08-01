@@ -1,1 +1,11 @@
-<p>update-news-items works!</p>
+<router-outlet></router-outlet>
+<div class="news">
+    <div class="news-card" *ngFor="let newsItem of newsList">
+        <h3 class="button" (click)="editNews(newsItem.id)">Edit</h3>
+        <h3 class="button" (click)="deleteNews(newsItem.id)">Delete</h3>
+        <h3>{{newsItem.body}}</h3>
+    </div>
+    <div class="addNews">
+        <a  routerLink="/admin/addNews">Add News</a>
+    </div>
+</div>

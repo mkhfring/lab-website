@@ -16,6 +16,7 @@ export class LabService {
   constructor(private http:HttpClient, private auth:AuthService) { }
 
   get_lab(): Observable<Lab>{
+    console.log(`this is ${this.baseURL}`);
     return this.http.get<{summary: string, title:string}>(`${this.baseURL}lab`) 
       .pipe(
         map(data => new Lab(data.summary, data.title))

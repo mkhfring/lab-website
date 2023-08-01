@@ -7,6 +7,8 @@ import { UpdateNewsCardComponent } from './components/update-news-card/update-ne
 import { UpdateNewsItemsComponent } from './components/update-news-items/update-news-items.component';
 import { UpdateLabComponent } from './components/update-lab/update-lab.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditNewsItemComponent } from './components/edit-news-item/edit-news-item.component';
+import { AddNewsItemsComponent } from './components/add-news-items/add-news-items.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminDashboardComponent,
     UpdateNewsCardComponent,
     UpdateNewsItemsComponent,
-    UpdateLabComponent
+    UpdateLabComponent,
+    EditNewsItemComponent,
+    AddNewsItemsComponent
   ],
   imports: [
     CommonModule,

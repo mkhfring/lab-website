@@ -4,6 +4,8 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { UpdateNewsItemsComponent } from './components/update-news-items/update-news-items.component';
 import { UpdateNewsCardComponent } from './components/update-news-card/update-news-card.component';
 import { UpdateLabComponent } from './components/update-lab/update-lab.component';
+import { EditNewsItemComponent } from './components/edit-news-item/edit-news-item.component';
+import { AddNewsItemsComponent } from './components/add-news-items/add-news-items.component';
 
 const routes: Routes = [
   {
@@ -12,6 +14,8 @@ const routes: Routes = [
       {path: 'updateNewsItems', component:UpdateNewsItemsComponent},
       {path: 'updateNewsCard', component:UpdateNewsCardComponent},
       {path: 'updateLab', component:UpdateLabComponent},
+      {path: 'editNews', component:EditNewsItemComponent},
+      {path: 'addNews', component:AddNewsItemsComponent}
     ]
   }
 
