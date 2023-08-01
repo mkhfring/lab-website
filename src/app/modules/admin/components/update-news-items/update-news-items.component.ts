@@ -13,7 +13,7 @@ import { NewsService } from 'src/app/services/news.service';
 export class UpdateNewsItemsComponent implements OnInit {
 
   newsList: News[] = [];
-  constructor(private auth:AuthService, private router:Router, private news:NewsService) { }
+  constructor(private auth:AuthService, private router:Router, private news:NewsService, private location:Location) { }
 
   
   ngOnInit(): void {
@@ -27,6 +27,11 @@ export class UpdateNewsItemsComponent implements OnInit {
 
     
   }
+  reloadPage(): void {
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+        this.router.navigate(['admin/updateNewsItems']);
+    });
+}
   editNews(id:number): void{
     this.news.set_news_id(id)
     this.router.navigate(['admin/editNews'])
@@ -35,7 +40,7 @@ export class UpdateNewsItemsComponent implements OnInit {
     this.news.delete_news_by_id(id).subscribe(
       res =>{
         console.log(res)
-        this.router.navigate(['admin/updateNewsItems'])
+        this.reloadPage();
       }
 
     )
