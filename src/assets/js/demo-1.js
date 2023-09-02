@@ -13,6 +13,7 @@
         target = {x: width/2, y: height/2};
 
         largeHeader = document.getElementById('large-header');
+        console.log(largeHeader);
         // largeHeader.style.height = height+'px';
         // largeHeader.style.width = width+'px';
 

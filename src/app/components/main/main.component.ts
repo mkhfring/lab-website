@@ -15,6 +15,10 @@ export class MainComponent implements OnInit {
   newsList: News[] = []
   newCard!: NewsCard;
   lab!:Lab;
+  title:String = 'Large Language Models For Code Research LAB';
+  contactSummary:String = 'We Connect with a wide variety of industry partners, including governments and commercial businesses. We explore fundamental research as well as creating solutions for specific problems.'
+  publicationSummary:String = "We publish innovative research on various facets of using large language models for code. This encompasses areas like code-focused language models, adapters, few-shot learning, transfer learning, and more. "
+
   
   constructor(private news:NewsService, private newscard:NewsCardService, private labservice:LabService) { }
 

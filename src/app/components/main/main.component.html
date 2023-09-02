@@ -47,7 +47,7 @@
     <canvas id="demo-canvas">
     </canvas>
     <h1 class="main-title">
-     Intelligent Sensing, Diagnostics and Prognostics Research Lab
+     {{title}}
     </h1>
    </div>
    <!--- Jumbotron -->
@@ -55,12 +55,9 @@
     <div class="row Jumbotron">
      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
       <!-- <i class="fas fa-desktop"></i> -->
-      <h3>
-       Research Overview
-      </h3>
-      <p class="justify">
-       The Intelligent Sensing, Diagnostics, and Prognostics Research Lab focuses on the methodologies to “acquire” and “process” information. To acquire information, we develop new sensing measurement technologies as well as industry IoT ecosystems for varied applications. To process information, we conduct the research on signal/image processing, data analysis, and data/information fusion to derive the insights to support decision making.
-      </p>
+
+        <h3 *ngIf="lab">{{lab!.title}}</h3>
+        <p class="justify" *ngIf="lab">{{lab.summary}}</p>
      </div>
      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
       <a href="research.html">
@@ -82,7 +79,7 @@
        Publications
       </h3>
       <p class="justify">
-       We Publish innovative solutions that create value from data, to facilitate better decisions and deeper knowledge. We are transforming the ability to achieve better outcomes in business through analytics, imaging, data retrieval and creating valuable data products through the use of machine learning, data mining and Computational analysis.
+        {{publicationSummary}}
       </p>
      </div>
      <div class="col-sm-12 col-md-4 col-md-margin2">
@@ -91,9 +88,7 @@
       <h3>
        Contact Us
       </h3>
-      <p class="justify">
-       We Connect with a wide variety of industry partners, including governments and commercial businesses. We explore fundamental research as well as creating solutions for specific problems.
-      </p>
+      <p class="justify">   {{contactSummary}}   </p>
      </div>
     </div>
     <hr class="my-4"/>

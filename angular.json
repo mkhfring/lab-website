@@ -25,7 +25,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/TweenLite.min.js",
+              "src/assets/js/EasePack.min.js",
+              "src/assets/js/demo-1.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -98,7 +102,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/demo-1.js",
+              "src/assets/js/EasePack.min.js",
+              "src/assets/js/TweenLite.min.js"
+            ]
           }
         }
       }
