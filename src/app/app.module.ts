@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AdminModule } from './modules/admin/admin.module';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AdminModule } from './modules/admin/admin.module';
     ResearchComponent,
     ProjectsComponent,
     HeaderComponent,
+    FooterComponent,
     
   ],
   imports: [
