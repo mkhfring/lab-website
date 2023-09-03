@@ -17,6 +17,15 @@ export class MembersComponent implements OnInit {
   ngOnInit(): void {
     this.members = [
       new Member(
+        'Professors', 
+        'Professors',
+        'Fatemeh Hendijani Fard', 
+        'Dr. Fard is the supervisor of our lab. Her research interests include the application of language models for code',
+        'https://cmps.ok.ubc.ca/about/contact/fatemeh-hendijani-fard/', 
+        '../../../assets/supervisor.jpg',
+        'professors'
+        ),
+      new Member(
         'Ph.D. Candidate', 
         'Ph.D. students',
         'Mohamad Khajezade', 
@@ -26,14 +35,13 @@ export class MembersComponent implements OnInit {
         'phd'
         ),
         new Member(
-          'Professors', 
-          'Professors',
-          'Fatemeh Hendijani Fard', 
-          'Dr. Fard is the supervisor of our lab. Her research interests include the application of language models for code',
-          'https://cmps.ok.ubc.ca/about/contact/fatemeh-hendijani-fard/', 
-          '../../../assets/supervisor.jpg',
-          'professors'
-          
+          'Ph.D. Candidate', 
+          'Ph.D. students',
+          'Iman Saberi', 
+          "A Ph.D. Student in compute science. Iman is working on Adapters for code undrestanding",
+          'https://www.linkedin.com/in/iman-saberi-2a601610b/?originalSubdomain=ca', 
+          '../../../assets/iman.jpg',
+          'phd'
           ),
     ]
 

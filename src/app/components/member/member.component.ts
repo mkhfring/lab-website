@@ -10,6 +10,7 @@ import { Member } from 'src/app/models/member';
 export class MemberComponent implements OnInit {
   public cardTitle:String = '';
   @Input('memeberInfo') member!: Member;
+  @Input('currentPosition') position!:string;
   constructor() { }
 
   ngOnInit(): void {
