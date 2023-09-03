@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AdminModule } from './modules/admin/admin.module';
 import { FooterComponent } from './components/footer/footer.component';
+import { MemberComponent } from './components/member/member.component';
+import { MembersComponent } from './components/members/members.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ProjectsComponent,
     HeaderComponent,
     FooterComponent,
+    MemberComponent,
+    MembersComponent
     
   ],
   imports: [

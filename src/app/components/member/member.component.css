@@ -1,0 +1,46 @@
+.container {
+    max-width: 1200px;
+    margin: 5% 30%;
+}
+.container h1 {
+    padding-left: 35%;
+    margin-bottom: 2em;
+    font-family: Oswald, sans-serif !important;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #ef4366;
+}
+.card1 {
+    margin-top: 10em;
+    display: flex;
+    gap: 3em;
+}
+.card1 img {
+    border-radius: 50%;
+    width: 40%;
+    height: 40%;
+}
+.title h3 {
+    text-align: left;
+    font-weight: 1000;
+    color: #6e00fd;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: Oswald, sans-serif !important;
+}
+.details .role p{
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #ef4366!important;
+    font-family: 'Open Sans';
+
+}
+.details p{
+    text-align: left;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: black;
+
+}
