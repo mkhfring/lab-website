@@ -6,12 +6,14 @@ import { NewsCard } from 'src/app/models/news-card';
 import { LabService } from 'src/app/services/lab.service';
 import { Lab } from 'src/app/models/lab';
 
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+  
   newsList: News[] = []
   newCard!: NewsCard;
   lab!:Lab;
@@ -23,6 +25,7 @@ export class MainComponent implements OnInit {
   constructor(private news:NewsService, private newscard:NewsCardService, private labservice:LabService) { }
 
   ngOnInit(): void {
+
     this.news.get_lab().subscribe( 
       res=>{
         this.newsList = res

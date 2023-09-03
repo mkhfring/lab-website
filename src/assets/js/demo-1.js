@@ -13,11 +13,12 @@
         target = {x: width/2, y: height/2};
 
         largeHeader = document.getElementById('large-header');
-        console.log(largeHeader);
         // largeHeader.style.height = height+'px';
         // largeHeader.style.width = width+'px';
 
         canvas = document.getElementById('demo-canvas');
+        console.log("I want to check this part of the code");
+        console.log(canvas);
         canvas.width = width;
         canvas.height = height;
         ctx = canvas.getContext('2d');
